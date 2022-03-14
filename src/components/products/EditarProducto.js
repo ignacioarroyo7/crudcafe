@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Form, Button} from "react-bootstrap";
+import {Form, Button,Container} from "react-bootstrap";
 
 const EditarProducto = () => {
   return (
-    <div>
+    <Container className="my-5">
       <Form>
         <Form.Group className="mb-3" controlId="formNombreProducto">
           <Form.Label>Nombre producto</Form.Label>
@@ -25,7 +25,7 @@ const EditarProducto = () => {
           Editar
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 };
 

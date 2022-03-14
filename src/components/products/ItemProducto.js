@@ -8,7 +8,7 @@ const ItemProducto = () => {
             <ListGroup.Item className='d-flex justify-content-between'>
                 asdasd
                 <section>
-                    <Button variant='warning'>Editar</Button>
+                    <Button variant='warning' className='me-2'>Editar</Button>
                     <Button variant='danger'>Borrar</Button>
                 </section>
             </ListGroup.Item>

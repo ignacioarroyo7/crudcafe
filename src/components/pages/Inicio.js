@@ -1,5 +1,5 @@
 import React from 'react';
-import fondo from "../../img/coffe.jpg";
+import fondo from "../../img/coffee.jpg";
 
 const Inicio = () => {
     return (
