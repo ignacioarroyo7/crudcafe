@@ -1,10 +1,9 @@
 import React from 'react';
+import fondo from "../../img/coffe.jpg";
 
 const Inicio = () => {
     return (
-        <div>
-            
-        </div>
+        <img src={fondo} alt="fondo de caffe" className='w-100'/>
     );
 };
 
