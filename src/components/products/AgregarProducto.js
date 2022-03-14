@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, Container, Alert } from "react-bootstrap";
 import { campoRequerido, rangoPrecio } from "../helpers/helpers";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-const AgregarProducto = () => {
+const AgregarProducto = (props) => {
   const [nombreProducto, setNombreProducto] = useState("");
   const [precioProducto, setPrecioProducto] = useState(0);
   const [categoriaProducto, setCategoriaProducto] = useState("");
   const [mensajeError, setMensajeError] = useState(false);
 
   const URL = process.env.REACT_APP_API_URL;
+
+  const navegacion = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,38 +35,42 @@ const AgregarProducto = () => {
       };
       //console.log(productoNuevo);
       //enviar el objeto producto a la api, peticion POST fetch(URL,Objeto)
-      try{
+      try {
         const parametros = {
-          method:"POST",
-          headers:{
-            "Content-Type":"application/json"
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
           },
-          body:JSON.stringify(productoNuevo)
-        }
-        const respuesta = await fetch(URL,parametros) 
+          body: JSON.stringify(productoNuevo),
+        };
+        const respuesta = await fetch(URL, parametros);
         //console.log(respuesta);
-        
-        if(respuesta.status===201){
+
+        if (respuesta.status === 201) {
           //mostrar mensaje al usuario que se cargo correctamente
           Swal.fire(
-            'Producto creado',
-            'El producto se creó correctamente',
-            'success'
-          )
+            "Producto creado",
+            "El producto se creó correctamente",
+            "success"
+          );
           //console.log(e.target)//para controlar si el e.target es el formulario en ese momento y si es.
           e.target.reset(); //limpia los value de todos el form
-        }else{
+
+          //redireccionar atraves de react router dom
+          //una vez que guarde me mande a la lista de productos
+            props.consultarAPI();
+          navegacion("/productos");
+        } else {
           //mostrar cartel de error, que lo intente mas tarde
           Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Por favor, intentelo más tarde',
-            footer: '<a href="">Why do I have this issue?</a>'
-          })
+            icon: "error",
+            title: "Oops...",
+            text: "Por favor, intentelo más tarde",
+            footer: '<a href="">Why do I have this issue?</a>',
+          });
         }
-      }catch(error){
-
-        console.log('error en enviar el objeto a la api')
+      } catch (error) {
+        console.log("error en enviar el objeto a la api");
       }
     } else {
       setMensajeError(true);

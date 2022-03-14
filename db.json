@@ -41,6 +41,18 @@
       "precioProducto": "20",
       "categoriaProducto": "salado",
       "id": 7
+    },
+    {
+      "nombreProducto": "Licuado con leche",
+      "precioProducto": "250",
+      "categoriaProducto": "bebida-fria",
+      "id": 8
+    },
+    {
+      "nombreProducto": "Pan",
+      "precioProducto": "100",
+      "categoriaProducto": "salado",
+      "id": 9
     }
   ]
 }
