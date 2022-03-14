@@ -17,6 +17,30 @@
       "nombreProducto": "Medialuna por unidad",
       "precioProducto": "35",
       "categoriaProducto": "dulce"
+    },
+    {
+      "nombreProducto": "Té de boldo",
+      "precioProducto": "40",
+      "categoriaProducto": "bebida-caliente",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Medialuna con dulce de leche",
+      "precioProducto": "60",
+      "categoriaProducto": "dulce",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Medialuna con membrillo",
+      "precioProducto": "60",
+      "categoriaProducto": "dulce",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Tortilla",
+      "precioProducto": "20",
+      "categoriaProducto": "salado",
+      "id": 7
     }
   ]
 }

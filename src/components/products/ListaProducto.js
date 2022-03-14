@@ -1,6 +1,7 @@
 import React from 'react';
-import { ListGroup, Button, Container } from "react-bootstrap";
+import { ListGroup, Container } from "react-bootstrap";
 import ItemProducto from "./ItemProducto";
+import { Link } from 'react-router-dom';
 
 const ListaProducto = (props) => {
   return (
@@ -9,7 +10,7 @@ const ListaProducto = (props) => {
           <hr />
           <article className="d-flex align-items-center mb-4 justify-content-end">
             <p className="my-0 me-4 fw-bold">Agregar nuevos productos:</p>
-            <Button variant='primary'>Agregar</Button>
+            <Link to='/productos/nuevo' className='btn btn-primary'>Agregar +</Link>
           </article>
           <ListGroup>
             {
