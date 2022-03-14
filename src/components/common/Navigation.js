@@ -1,18 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar,Nav, Container } from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const Navigation = () => {
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
         <Container>
-        <Navbar.Brand href="#" className='navbar-brand'>CRUD Cafe</Navbar.Brand>
+        <Link to='/' className='navbar-brand'>CRUD Cafe</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#" className='nav-link'>Inicio</Nav.Link>
-              <Nav.Link href="#" className='nav-link'>Productos</Nav.Link>
-              <Nav.Link href="#" className='nav-link'>Extra</Nav.Link>
+              <Link to='/' className="nav-link">Inicio</Link>
+              <Link to='/productos' className="nav-link">Productos</Link>
+              <Link to='/error404' className="nav-link">Extra</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
