@@ -4,10 +4,11 @@ import {Form, Button,Container} from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 
-const EditarProducto = () => {
+const EditarProducto = (props) => {
 
   const {id} = useParams(); //El valor que tiene la propiedad id del objeto parametro, guardalo dentro de const id
   const [producto,setProducto] = useState({});
+  const [categoriaProducto, setCategoriaProducto] = useState('');
   const URL = process.env.REACT_APP_API_URL+"/"+id;
 
   
@@ -20,6 +21,7 @@ const EditarProducto = () => {
         const dato = await respuesta.json();
         // console.log(dato)
         setProducto(dato);
+        setCategoriaProducto(dato.categoriaProducto);
       }
     } catch (error) {
       console.log(error);
@@ -37,7 +39,7 @@ const EditarProducto = () => {
           <Form.Control
             type="text"
             placeholder="Ingresar nombre producto..."
-        
+            defaultValue={producto.nombreProducto}
           />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -45,12 +47,12 @@ const EditarProducto = () => {
           <Form.Control
             type="text"
             placeholder="Ingresar precio del producto..."
-            
+            defaultValue={producto.precioProducto}
           />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Categoria producto</Form.Label>
-          <Form.Select>
+          <Form.Select value={categoriaProducto} onChange={(e)=>setCategoriaProducto(e.target.value)}>
             <option value="">Seleccione una opcion</option>
             <option value="bebida-caliente">Bebida caliente</option>
             <option value="bebida-fria">Bebida fria</option>
