@@ -2,6 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ListGroup,Button } from 'react-bootstrap';
 import Swal from "sweetalert2";
+import { Link } from 'react-router-dom';
 
 const ItemProducto = (props) => {
 
