@@ -54,7 +54,7 @@ const ItemProducto = (props) => {
                 <span className='fw-bolder'>- Precio: $ {props.producto.precioProducto}</span>
                 </p>
                 <div>
-                    <Button variant='warning' className='me-2'>Editar</Button>
+                    <Link to={`/productos/editar/${props.producto.id}`} className='btn btn-warning me-2'>Editar</Link>
                     <Button variant='danger' onClick={()=>eliminarProducto()}>Borrar</Button>
                 </div>
             </ListGroup.Item>
