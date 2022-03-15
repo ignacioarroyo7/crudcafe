@@ -1,12 +1,6 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombreProducto": "Té de manzanilla",
-      "precioProducto": "40",
-      "categoriaProducto": "bebida-caliente"
-    },
-    {
       "id": 2,
       "nombreProducto": "Café con leche",
       "precioProducto": "60",
