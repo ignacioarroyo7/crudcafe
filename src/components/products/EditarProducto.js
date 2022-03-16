@@ -4,7 +4,7 @@ import {Form, Button,Container} from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 
-const EditarProducto = (props) => {
+const EditarProducto = () => {
 
   const {id} = useParams(); //El valor que tiene la propiedad id del objeto parametro, guardalo dentro de const id
   const [producto,setProducto] = useState({});
