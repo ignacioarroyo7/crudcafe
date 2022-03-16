@@ -2,7 +2,7 @@
   "productos": [
     {
       "nombreProducto": "Té verde",
-      "precioProducto": "65",
+      "precioProducto": "60",
       "categoriaProducto": "bebida-caliente",
       "id": 2
     },
@@ -47,6 +47,12 @@
       "precioProducto": "60",
       "categoriaProducto": "dulce",
       "id": 9
+    },
+    {
+      "nombreProducto": "Factura con crema",
+      "precioProducto": "70",
+      "categoriaProducto": "dulce",
+      "id": 10
     }
   ]
 }
