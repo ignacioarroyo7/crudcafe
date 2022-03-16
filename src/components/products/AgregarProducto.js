@@ -31,7 +31,7 @@ const AgregarProducto = (props) => {
         //notacion implicita de objeto, solo se puede cuando el nombre de la propiedad es igual al nombre de variable que contiene el valor
         nombreProducto,
         precioProducto,
-        categoriaProducto,
+        categoriaProducto
       };
       //console.log(productoNuevo);
       //enviar el objeto producto a la api, peticion POST fetch(URL,Objeto)

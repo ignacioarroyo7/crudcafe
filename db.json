@@ -1,16 +1,16 @@
 {
   "productos": [
     {
-      "id": 2,
-      "nombreProducto": "Café con leche",
-      "precioProducto": "60",
-      "categoriaProducto": "bebida-caliente"
+      "nombreProducto": "Té verde",
+      "precioProducto": "65",
+      "categoriaProducto": "bebida-caliente",
+      "id": 2
     },
     {
-      "id": 3,
-      "nombreProducto": "Medialuna por unidad",
-      "precioProducto": "35",
-      "categoriaProducto": "dulce"
+      "nombreProducto": "Café colombiano",
+      "precioProducto": "200",
+      "categoriaProducto": "bebida-caliente",
+      "id": 3
     },
     {
       "nombreProducto": "Té de boldo",
@@ -41,12 +41,6 @@
       "precioProducto": "250",
       "categoriaProducto": "bebida-fria",
       "id": 8
-    },
-    {
-      "nombreProducto": "Pan",
-      "precioProducto": "100",
-      "categoriaProducto": "salado",
-      "id": 9
     }
   ]
 }
