@@ -20,7 +20,7 @@
     },
     {
       "nombreProducto": "Medialuna con dulce de leche",
-      "precioProducto": "60",
+      "precioProducto": "70",
       "categoriaProducto": "dulce",
       "id": 5
     },
@@ -32,7 +32,7 @@
     },
     {
       "nombreProducto": "Tortilla",
-      "precioProducto": "20",
+      "precioProducto": "25",
       "categoriaProducto": "salado",
       "id": 7
     },
@@ -41,6 +41,12 @@
       "precioProducto": "250",
       "categoriaProducto": "bebida-fria",
       "id": 8
+    },
+    {
+      "nombreProducto": "Palmerita",
+      "precioProducto": "60",
+      "categoriaProducto": "dulce",
+      "id": 9
     }
   ]
 }
