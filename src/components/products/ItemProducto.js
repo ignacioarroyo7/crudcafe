@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const ItemProducto = (props) => {
 
     const eliminarProducto = ()=>{
-        //console.log(props.producto.id)
+        //console.log(props.producto._id)
 
         // confirmar la eliminacion
         Swal.fire({
@@ -24,7 +24,7 @@ const ItemProducto = (props) => {
                 //logica para pedir a la api para pedir borrar el producto
                 try {
                     //URL es la url de la api concatenado el /id del producto
-                    const URL = process.env.REACT_APP_API_URL+'/'+props.producto.id;
+                    const URL = process.env.REACT_APP_API_URL+'/'+props.producto._id;
                     const respuesta = await fetch(URL,{method:"DELETE",headers:{"Content-Type":"application/json"}}); //no agrego el body pq no envio un objeto como en el caso de POST
                     console.log(respuesta);
                     if(respuesta.status===200){//si la api borro el producto, muestro el msj
@@ -54,7 +54,7 @@ const ItemProducto = (props) => {
                 <span className='fw-bolder'>- Precio: $ {props.producto.precioProducto}</span>
                 </p>
                 <div>
-                    <Link to={`/productos/editar/${props.producto.id}`} className='btn btn-warning me-2'>Editar</Link>
+                    <Link to={`/productos/editar/${props.producto._id}`} className='btn btn-warning me-2'>Editar</Link>
                     <Button variant='danger' onClick={()=>eliminarProducto()}>Borrar</Button>
                 </div>
             </ListGroup.Item>
